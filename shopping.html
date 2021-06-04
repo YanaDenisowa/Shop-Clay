@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Start Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <!--End Google Fonts-->
+    <!--Start Font Awesome-->
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <!--End Font Awesome-->
+    <!--Start Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--End Bootstrap-->
+    <!--Start Slick CSS-->
+    <link rel="stylesheet" href="slickslider.css">
+
+
+    <!--Start Main CSS-->
+    <link rel="stylesheet" href="shopping.css">
+    <!--End Main CSS-->
+</head>
+<body>
+<!--Start Header-->
+<header>
+    <div class="header container">
+        <div class="header__logo">
+            <a href="#"></a>
+        </div>
+        <nav class="header__nav">
+            <ul class="header_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header__cart">
+            <a href="#" class="search"><i class="fas fa-search"></i></a>
+            <a href="#" class="user"><i class="fas fa-user"></i></a>
+            <a href="#" class="cart"><i class="fas fa-shopping-bag"></i></a>
+            <a href="#" class="burger"  onclick="menuShow()"><i class="fas fa-bars"></i></a>
+        </div>
+
+    </div>
+    <div class="right_side_menu">
+        <ul class="right_menu" id="right_menu_burger">
+            <li>
+                <a href="#" class="burger"  onclick="menuHide()">
+                    <i class="fas fa-times"></i>
+                </a>
+            </li>
+            <li><a href="#">Home</a></li>
+            <li class="mine_dropdown_1">
+                <a href="#" class="drop_btn" onclick="toggleDropdownList()">
+                     Shop
+                    <i class="fas fa-caret-down drop_btn" id="dropdown_icon_burger" ></i>
+                </a>
+            <div class="dropdown_content_burger" id="myDropdownBurger">
+                <a href="#">Clothes</a>
+                <a href="#">Bags</a>
+                <a href="#">Accessories</a>
+                <a href="#">Shoes</a>
+                <a href="#">Denim</a>
+                <a href="#">Jacket</a>
+             </div>
+             </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</header>
+<!--End Header-->
+<!--Start Product Card Section-->
+<section class="product_cards ">
+    <div class="container">
+        <div class="row">
+            <div class="dropContainer" >
+                <div class="drop_label">Shop</div>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>All</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected" data-value="All">All</span>
+                            <span class="custom-option" data-value="Clothes">Clothes</span>
+                            <span class="custom-option" data-value="Bags">Bags</span>
+                            <span class="custom-option" data-value="Shoes">Shoes</span>
+                            <span class="custom-option" data-value="Dresses">Dresses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropContainer" >
+                <div class="drop_label">Price</div>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Any</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected" data-value="Any">Any</span>
+                            <span class="custom-option" data-value="Clothes">Clothes</span>
+                            <span class="custom-option" data-value="Bags">Bags</span>
+                            <span class="custom-option" data-value="Shoes">Shoes</span>
+                            <span class="custom-option" data-value="Dresses">Dresses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropContainer" >
+                <div class="drop_label">Brand</div>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Any</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected" data-value="Any">Any</span>
+                            <span class="custom-option" data-value="Clothes">DG</span>
+                            <span class="custom-option" data-value="Bags">Louis</span>
+                            <span class="custom-option" data-value="Shoes">Chanel</span>
+                            <span class="custom-option" data-value="Dresses">Moscino</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropContainer size_select">
+                <div class="drop_label">Size</div>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select" >
+                        <div class="custom-select__trigger" >
+                            <label for="xs">
+                                <input type="checkbox" id="xs" class="label_checkbox">
+                                    <span class="label_text">
+                                        <span class="label_check mr">XS</span>
+                                    </span>
+                            </label>
+                            <label for="s">
+                                <input type="checkbox" id="s" class="label_checkbox">
+                                <span class="label_text">
+                                        <span class="label_check mr">S</span>
+                                </span>
+                            </label>
+                            <label for="m">
+                                <input type="checkbox" id="m" class="label_checkbox">
+                                <span class="label_text">
+                                        <span class="label_check mr">M</span>
+                                </span>
+                            </label>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option " data-value="L">
+                                <label for="l">
+                                    <input type="checkbox" id="l" class="label_checkbox">
+                                    <span class="label_text">
+                                            <span class="label_check">L</span>
+                                    </span>
+                                </label>
+                            </span>
+                            <span class="custom-option" data-value="xl">
+                                <label for="xl">
+                                    <input type="checkbox" id="xl" class="label_checkbox">
+                                    <span class="label_text">
+                                            <span class="label_check">XL</span>
+                                    </span>
+                                </label>
+                            </span>
+                            <span class="custom-option" data-value="xxl">
+                                <label for="xxl">
+                                    <input type="checkbox" id="xxl" class="label_checkbox">
+                                    <span class="label_text">
+                                            <span class="label_check">XXL</span>
+                                    </span>
+                                </label>
+                            </span>
+                            <span class="custom-option" data-value="xxs">
+                                <label for="xxs">
+                                    <input type="checkbox" id="xxs" class="label_checkbox">
+                                    <span class="label_text">
+                                            <span class="label_check">XXS</span>
+                                    </span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropContainer color_select">
+                <div class="drop_label">Color</div>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select" >
+                        <div class="custom-select__trigger" >
+                            <style>
+                                .color_select .custom-select{
+                                    border:none;
+                                    padding: 0;
+                                }
+                                .color_select .custom-select__trigger{
+                                    padding: 0;
+                                    justify-content: unset;
+
+                                }
+                                .color_select .custom-options{
+                                    top: 120%;
+                                }
+
+                                .color_select .label_check {
+                                    max-width:30px;
+                                    /*margin-right:12px;*/
+                                    /*padding:20px 32px;*/
+                                    border-radius: 8px;
+                                    /*border: 2px solid #E5E5EA;*/
+                                    background: #1B2437;
+                                    vertical-align: middle;
+                                    width: 2em;
+                                    height: 2em;
+                                    cursor: pointer;
+                                    display: flex;
+                                    /*align-items: center;*/
+                                    /*justify-content: center;*/
+                                    /*font-family: 'Mulish',sans-serif;*/
+                                    /*font-style: normal;*/
+                                    /*font-weight: normal;*/
+                                    /*font-size: 16px;*/
+                                    /*text-align: center;*/
+                                    /*color: #1B2437;*/
+                                }
+                                .color_select .custom-options{
+                                    display: flex;
+                                    /*padding: 10px;*/
+                                    margin: -1px;
+                                    flex-wrap: wrap;
+                                }
+                                .color_select .custom-option {
+                                    border-radius:8px;
+                                    position: relative;
+                                    display: block;
+                                    cursor: pointer;
+                                    transition: all 0.5s;
+                                }
+
+                                .color_select .label_check:hover {
+                                    border-radius:8px;
+
+                                    border:2px solid red;
+                                    background-color:#1B2437;
+                                }
+
+
+                                .color_select .selected  {
+                                    border:2px solid #EDA3B5;
+                                    border-radius: 8px;
+                                    color: white;
+                                    background-color: #1B2437;
+                                }
+
+                            </style>
+                            <label for="black">
+                                <input type="checkbox" id="black" class="label_checkbox">
+                                <span class="label_text">
+                                        <span class="label_check mr" id="black"></span>
+                                    </span>
+                            </label>
+
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option " data-value="L">
+                                <label for="l">
+                                    <input type="checkbox" id="l" class="label_checkbox">
+                                    <span class="label_text">
+                                            <span class="label_check">L</span>
+                                    </span>
+                                </label>
+                            </span>
+                            <span class="custom-option" data-value="xl">
+                                <label for="xl">
+                                    <input type="checkbox" id="xl" class="label_checkbox">
+                                    <span class="label_text">
+                                            <span class="label_check">XL</span>
+                                    </span>
+                                </label>
+                            </span>
+                            <span class="custom-option" data-value="xxl">
+                                <label for="xxl">
+                                    <input type="checkbox" id="xxl" class="label_checkbox">
+                                    <span class="label_text">
+                                            <span class="label_check">XXL</span>
+                                    </span>
+                                </label>
+                            </span>
+                            <span class="custom-option" data-value="xxs">
+                                <label for="xxs">
+                                    <input type="checkbox" id="xxs" class="label_checkbox">
+                                    <span class="label_text">
+                                            <span class="label_check">XXS</span>
+                                    </span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product_cards_container container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card_item">
+                    <img src="img/shayan-R3JgAzaaJ4E-unsplash.png" alt="">
+                    <h3>Women's costume <br>Yves Saint Laurent</h3>
+                    <p>Fashion is something we deal with everyday. Even people who say t…</p>
+                    <div class="item_info">
+                        <span>$ 1140</span>
+                        <a href="#" class="product_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card_item">
+                    <img src="img/Mask%20Group.png" alt="">
+                    <h3>Dress Karl Lagerfeld</h3>
+                    <p>Another masterpiece from the legendary designer. He designed new dress dev…</p>
+                    <div class="item_info">
+                        <span>$ 640</span>
+                        <a href="#" class="product_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card_item">
+                    <img src="img/ferdinand-studio-y9OZunuQ6m8-unsplash.png" alt="">
+                    <h3>Dress Karl Lagerfeld</h3>
+                    <p>Another masterpiece from the legendary designer. He designed new dress dev…</p>
+                    <div class="item_info">
+                        <span>$ 640</span>
+                        <a href="#" class="product_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card_item">
+                    <img src="img/hls-44-rkBktp5Cg_U-unsplash.png" alt="">
+                    <h3>Men’s black tie Valentino</h3>
+                    <p>Jacquard Valentino tie with Valentino logo motif.</p>
+                    <div class="item_info">
+                        <span>$ 225</span>
+                        <a href="#" class="product_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card_item">
+                    <img src="img/frank-uyt-den-bogaard-w8Dp5fbGPHA-unsplash.png" alt="">
+                    <h3>Men’s jacket
+                        Off- white</h3>
+                    <p>Off-White scuffed denim jacket. Faded effect, baggy cut, pointed collar, clasp</p>
+                    <div class="item_info">
+                        <span>$ 215</span>
+                        <a href="#" class="product_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card_item">
+                    <img src="img/patrick-gillespie-bn81oJsgcE8-unsplash.png" alt="">
+                    <h3>Women's costume Yves Saint Laurent</h3>
+                    <p>Fashion is something we deal with everyday. Even people who say t…</p>
+                    <div class="item_info">
+                        <span>$ 1140</span>
+                        <a href="#" class="product_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="pagination container ">
+        <a href="#" class="prev"></a>
+        <div class="centered">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="active">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">...</a>
+            <a href="#">231</a>
+        </div>
+        <a href="#" class="next"></a>
+    </div>
+    </div>
+</section>
+<!--End Product Card Section-->
+<!--Start Footer-->
+<footer class="footer_container container">
+    <div class="footer_row ">
+        <div class="column_first">
+            <h3>Hot links</h3>
+            <ul class="footer_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="column_second">
+            <h3>More info</h3>
+            <ul>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Decline rules</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <div class="column_third">
+            <h3>Customer care</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="column_fourth">
+            <h3>Get newsletter</h3>
+            <ul>
+                <li class="last"><a href="#">Get updates about style</a></li>
+            </ul>
+            <form action="#" class="form_group1">
+                <input class="form_field1" type="email" placeholder="Type your email">
+                <button></button>
+            </form>
+        </div>
+    </div>
+</footer>
+<!--End Footer-->
+<!--Start Copyrights-->
+<section class="rights">
+    <div class="rights_container container">
+        <p>© Clay Shop all rights reserved</p>
+        <div class="rights_social_links">
+            <ul class="rights_social_icon">
+                <li><a href="#" class="insta"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="tw"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Copyrights-->
+<!--Start JQuery-->
+<script type="text/javascript" src=" https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--Start JS-->
+<script type="text/javascript" src="js/dropdown.js"></script>
+<script  type="text/javascript" src="js/scriptShopping.js"></script>
+</body>
+</html>

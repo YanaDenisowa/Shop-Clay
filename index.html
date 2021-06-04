@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Start Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <!--End Google Fonts-->
+    <!--Start Font Awesome-->
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <!--End Font Awesome-->
+    <!--Start Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--End Bootstrap-->
+    <!--Start Slick CSS-->
+    <link rel="stylesheet" href="slickslider.css">
+
+
+    <!--Start Main CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--End Main CSS-->
+</head>
+<body>
+<!-- Start Header -->
+<header>
+    <div class="header">
+        <div class="header_container">
+            <div class="header__logo">
+                <a href="#">Clay Shop</a>
+            </div>
+            <div class="header__social">
+                <ul class="social_icon">
+                    <li><a href="#" class="insta"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="tw"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+            <div class="header__cart">
+                <a href="#" class="search"><i class="fas fa-search"></i></a>
+                <a href="#" class="cart"><i class="fas fa-shopping-bag"></i></a>
+                <a href="#" class="burger"  onclick="menuShow()"><i class="fas fa-bars"></i></a>
+            </div>
+        </div>
+        <div class="right_side_menu">
+            <ul class="right_menu" id="right_menu_burger">
+                <li>
+                    <a href="#" class="burger"  onclick="menuHide()">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </li>
+                <li><a href="#">Home</a></li>
+                <li class="mine_dropdown_1">
+                    <a href="#" class="drop_btn" onclick="toggleDropdownList()">
+                        Shop
+                        <i class="fas fa-caret-down drop_btn" id="dropdown_icon_burger" ></i>
+                    </a>
+                    <div class="dropdown_content_burger" id="myDropdownBurger">
+                        <a href="#">Clothes</a>
+                        <a href="#">Bags</a>
+                        <a href="#">Accessories</a>
+                        <a href="#">Shoes</a>
+                        <a href="#">Denim</a>
+                        <a href="#">Jacket</a>
+                    </div>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Info</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <nav class="header__nav my_container">
+            <ul class="header_menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li class="mine_dropdown">
+                    <a href="#" class="drop_btn" onclick="toggleDropdownList()">
+                        Shop
+                        <i class="fas fa-caret-down drop_btn" id="dropdown_icon"></i>
+                    </a>
+                    <div class="dropdown_content" id="myDropdown">
+                        <a href="#">Clothes</a>
+                        <a href="#">Bags</a>
+                        <a href="#">Accessories</a>
+                        <a href="#">Shoes</a>
+                        <a href="#">Denim</a>
+                        <a href="#">Jacket</a>
+                    </div>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- End Header -->
+<!--Start Hero Section-->
+<section class="hero ">
+
+    <div class="hero_info container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Admire Stylish<br>
+                    Dresses & Looks
+                </h2>
+                <p>If we wanted to build a human-level tool to offer<br>
+                    automated outfit advice, we needed to understand<br>
+                    people’s fashion taste.
+                </p>
+                <a href="#" class="hero__btn">Show More</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--End Hero Section-->
+<!--Start Categories Section-->
+<section class="category ">
+    <div class="category_container ">
+        <div class="container px-md-0">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="image_text">
+                        <h2>Women<br>
+                            Collection</h2>
+                        <h3>Spring 2020</h3>
+                        <!--<a href="#" class="category_btn"><span>Popular</span></a>-->
+                        <a href="#" class="category_btn">Popular</a>
+                    </div>
+
+                    <img src="img/women_collection_category.png"   alt="" class="img-fluid img_min_width">
+                </div>
+                <div class="col-md-6 col-sm-12" id="category_second_column">
+                    <div class="row ">
+                        <div class="col-sm-6">
+                            <img src="img/bestsellers_category.png" alt="" class="img-fluid img_min_width" >
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="image_text">
+                                <a href="#" class="second__pic_btn">New</a>
+                                <h2>Dresses</h2>
+                            </div>
+                            <img src="img/dresses_category.png" alt="" class="img-fluid img_min_width">
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-sm-12">
+                            <div class="image_text">
+                                <a href="#" class="third__item_btn ">New</a>
+                                <h2>Denim Jackets</h2>
+                            </div>
+                            <img src="img/denim_jackets_category.png" alt=""  class="img-fluid img_min_width">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Categories Section-->
+<!--Start Slider Section-->
+
+<section class="slider parent_container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="slider_block container">
+                    <div class="slider_item">
+                        <img src="img/Bitmap.png" alt="shoes" style="padding-top:57px; ">
+                        <h3 style="margin-top:34px; ">Louis Vouiton</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap%20(1).png" alt="shirt" style="padding-top:52px; ">
+                        <h3 style="margin-top:28px; ">Dolce&Gabbana</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Screenshot%202020-06-10%20at%2020.22.20.png" alt="bag" style="padding-top:75px; ">
+                        <h3 style="margin-top:51px;">Gucci</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap%20(2).png" alt="dress" style="padding-top:55px; ">
+                        <h3 style="margin-top:31px;">Dries van Noten</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap.png" alt="shoes" style="padding-top:57px; ">
+                        <h3 style="margin-top:34px; ">Louis Vouiton</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap%20(1).png" alt="shirt" style="padding-top:52px; ">
+                        <h3 style="margin-top:28px; ">Dolce&Gabbana</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Screenshot%202020-06-10%20at%2020.22.20.png" alt="bag" style="padding-top:75px; ">
+                        <h3 style="margin-top:51px;">Gucci</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap%20(2).png" alt="dress" style="padding-top:55px; ">
+                        <h3 style="margin-top:31px;">Dries van Noten</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap.png" alt="shoes" style="padding-top:57px; ">
+                        <h3 style="margin-top:34px; ">Louis Vouiton</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap%20(1).png" alt="shirt" style="padding-top:52px; ">
+                        <h3 style="margin-top:28px; ">Dolce&Gabbana</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Screenshot%202020-06-10%20at%2020.22.20.png" alt="bag" style="padding-top:75px; ">
+                        <h3 style="margin-top:51px;">Gucci</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap%20(2).png" alt="dress" style="padding-top:55px; ">
+                        <h3 style="margin-top:31px;">Dries van Noten</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap.png" alt="shoes" style="padding-top:57px; ">
+                        <h3 style="margin-top:34px; ">Louis Vouiton</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap%20(1).png" alt="shirt" style="padding-top:52px; ">
+                        <h3 style="margin-top:28px; ">Dolce&Gabbana</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Screenshot%202020-06-10%20at%2020.22.20.png" alt="bag" style="padding-top:75px; ">
+                        <h3 style="margin-top:51px;">Gucci</h3>
+                    </div>
+                    <div class="slider_item">
+                        <img src="img/Bitmap%20(2).png" alt="dress" style="padding-top:55px; ">
+                        <h3 style="margin-top:31px;">Dries van Noten</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Slider Section-->
+<!--Start Product Section-->
+
+<section class="product">
+    <div class="container">
+        <div class="wrapper">
+            <h2>You may like</h2>
+            <div class="slider_nav"></div>
+        </div>
+    </div>
+    <!--<h2 class="container ">You may like</h2>-->
+    <div class="product_container container  parent_container">
+        <!--<div class="slider_nav container"></div>-->
+        <div class="product_slider">
+            <div class="product_slider_item">
+                <div class="slide_card">
+                    <div class="image_wrapper">
+                        <img src="img/khaled-ghareeb-Oj4HsmI7JDk-unsplash.png" alt="">
+                    </div>
+                    <h3>Women's black<br>
+                        vest Gucci</h3>
+                    <div class="item_info">
+                        <span>$ 715</span>
+                        <a href="#" class="product_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product_slider_item">
+                <div class="slide_card">
+                    <div class="image_wrapper">
+                        <img src="img/khaled-ghareeb--NyPn9up_7o-unsplash.png" alt="">
+                    </div>
+                    <h3 >Red dress<br>
+                        Valentino</h3>
+                    <div class="item_info">
+                        <span>$ 1610</span>
+                        <a href="#" class="product_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product_slider_item">
+                <div class="slide_card">
+                    <div class="image_wrapper">
+                        <img src="img/hanen-souhail-F5EO6OD9kBo-unsplash.png" alt="">
+                    </div>
+                    <h3>Shiny dress<br>
+                        Givenchy</h3>
+                    <p>A shiny dress in the style of Lady Gaga, for bright events and cool parties…</p>
+                    <div class="item_info">
+                        <span>$ 540</span>
+                        <a href="#" class="product_btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product_slider_item">
+                <div class="slide_card">
+                    <div class="image_wrapper">
+                        <img src="img/khaled-ghareeb-Oj4HsmI7JDk-unsplash.png" alt="">
+                    </div>
+                    <h3>Women's black
+                    vest Gucci</h3>
+                <div class="item_info">
+                    <span>$ 715</span>
+                    <a href="#" class="product_btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="product_slider_item">
+                <div class="slide_card">
+                    <div class="image_wrapper">
+                        <img src="img/khaled-ghareeb--NyPn9up_7o-unsplash.png" alt="">
+                    </div>
+                    <h3 >Red dress
+                    Valentino</h3>
+                <div class="item_info">
+                    <span>$ 1610</span>
+                    <a href="#" class="product_btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="product_slider_item">
+                <div class="slide_card">
+                    <div class="image_wrapper">
+                        <img src="img/hanen-souhail-F5EO6OD9kBo-unsplash.png" alt="">
+                    </div>
+                     <h3>Shiny dress
+                    Givenchy</h3>
+                    <p>A shiny dress in the style of Lady Gaga, for bright events and cool parties…</p>
+                <div class="item_info">
+                    <span>$ 540</span>
+                    <a href="#" class="product_btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="product_slider_item">
+                <div class="slide_card">
+                    <div class="image_wrapper">
+                        <img src="img/khaled-ghareeb-Oj4HsmI7JDk-unsplash.png" alt="">
+                    </div>
+                    <h3>Women's black
+                    vest Gucci</h3>
+                    <div class="item_info">
+                    <span>$ 715</span>
+                    <a href="#" class="product_btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="product_slider_item">
+                <div class="slide_card">
+                    <div class="image_wrapper">
+                        <img src="img/khaled-ghareeb--NyPn9up_7o-unsplash.png" alt="">
+                    </div>
+                    <h3 >Red dress
+                    Valentino</h3>
+                    <div class="item_info">
+                    <span>$ 1610</span>
+                    <a href="#" class="product_btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="product_slider_item">
+                <div class="slide_card">
+                    <div class="image_wrapper">
+                <img src="img/hanen-souhail-F5EO6OD9kBo-unsplash.png" alt="">
+                    </div>
+                <h3>Shiny dress
+                    Givenchy</h3>
+                <p>A shiny dress in the style of Lady Gaga, for bright events and cool parties…</p>
+                <div class="item_info">
+                    <span>$ 540</span>
+                    <a href="#" class="product_btn">Shop Now</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--End Product Section-->
+<!--Start Footer-->
+<footer class="footer container ">
+    <div class="footer_row_small ">
+        <ul class="row_links">
+            <li><a href="#" class="active_page">Home</a></li>
+            <li><a href="shopping.html">Shop</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="line_divider container"></div>
+    </div>
+    <div class="footer_row_large">
+        <div class="column_first">
+            <a href="#">Clay Shop</a>
+            <p>Fashion is a popular
+                aesthetic expression at a particular time, place and in
+                a specific context, especially in clothing, footwear, lifestyle,
+                accessories, makeup.
+            </p>
+        </div>
+        <div class="column_second">
+            <h3>Hot links</h3>
+            <ul class="footer_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="shopping.html">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="column_third">
+            <h3>More info</h3>
+            <ul>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Decline rules</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <div class="column_fourth">
+            <h3>Customer care</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!--End Footer-->
+<!--Start Copyrights-->
+<section class="rights ">
+    <div class="rights_container container ">
+        <p>© Clay Shop all rights reserved</p>
+            <div class="rights_social_links">
+                <ul class="rights_social_icon">
+                    <li><a href="#" class="insta"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="tw"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+    </div>
+</section>
+<!--End Copyrights-->
+
+<!--Start JQuery-->
+<script type="text/javascript" src=" https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--Start Slick Slider-->
+<script type="text/javascript" src="js/slick.min.js"></script>
+<!--Start JS-->
+<script  type="text/javascript" src="js/script.js"></script>
+
+
+</body>
+</html>
